@@ -24,10 +24,16 @@ Transformer名称的来源 - 每一层将一个sequence变为另一个sequence
 
     方法：
     - 使用正弦和余弦函数生成位置编码
+
       $$PE(pos, 2i) = \sin\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right)$$
+
       $$PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right)$$
 
-      其中，$$pos$$ 是输入的词索引，$$i$$ 是输入的维度索引，$$d_{\text{model}}$$ 是输入的维度。
+      pos - 输入的词索引
+
+      i - 输入的维度索引
+
+      d_model - 输入的维度
 
     - 可学习参数
 
@@ -39,5 +45,12 @@ Transformer名称的来源 - 每一层将一个sequence变为另一个sequence
 
     $$LN(x) = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} * \gamma + \beta$$
 
-    其中，$$\mu$$ 和 $$\sigma$$ 是输入的均值和标准差，$$\gamma$$ 和 $$\beta$$ 是可学习参数
+    μ - 输入的均值
+
+    σ - 输入的标准差
+
+    γ - 可学习参数
+
+    β - 可学习参数
+
 
