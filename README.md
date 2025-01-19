@@ -29,12 +29,6 @@ Transformer名称的来源 - 每一层将一个sequence变为另一个sequence
 
       $$PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{\frac{2i}{d_{\text{model}}}}}\right)$$
 
-      pos - 输入的词索引
-
-      i - 输入的维度索引
-
-      d_model - 输入的维度
-
     - 可学习参数
 
 4. **Layer Normalization**
@@ -44,13 +38,4 @@ Transformer名称的来源 - 每一层将一个sequence变为另一个sequence
     公式：
 
     $$LN(x) = \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} * \gamma + \beta$$
-
-    μ - 输入的均值
-
-    σ - 输入的标准差
-
-    γ - 可学习参数
-
-    β - 可学习参数
-
 
